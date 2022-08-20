@@ -1,0 +1,3 @@
+/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug/CMakeFiles/CustomString.dir
+/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug/CMakeFiles/rebuild_cache.dir
