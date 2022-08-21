@@ -1,0 +1,9 @@
+# ninja log v5
+0	375	1661034466776550815	CMakeFiles/CustomString.dir/main.cpp.o	e373754108c8aea4
+425	480	1661038317017824033	CustomString	9f3593b08917a07a
+2	425	1661038316961922717	CMakeFiles/CustomString.dir/CustomStringTest.cpp.o	cc43b7296f7f4aac
+0	361	1661035645249379967	_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o	ca7a9b7e032b783f
+0	1344	1661035646229888065	_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o	8fb885594cb5ab93
+3	252	1661038306551806096	CMakeFiles/CustomString.dir/CustomString.cpp.o	fc168a0e21e1ffa2
+1345	1429	1661035646319215000	lib/libgtest.a	21fa1f62a564646f
+1429	1443	1661035646332796000	lib/libgtest_main.a	1a22b72292c1559

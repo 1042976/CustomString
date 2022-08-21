@@ -1,0 +1,21 @@
+# ninja log v5
+0	9	1661038708437996756	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	19e9338b36ecec5c
+0	9	1661038708437996756	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	19e9338b36ecec5c
+9	645	1661038709073751939	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	836ed4a513b80cf5
+9	645	1661038709073751939	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	836ed4a513b80cf5
+645	654	1661038709083009894	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	a6b30ba94e96fbbe
+645	654	1661038709083009894	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	a6b30ba94e96fbbe
+654	665	1661038709091670888	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fbea2959f47daad4
+654	665	1661038709091670888	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	fbea2959f47daad4
+665	675	1661038709104130815	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	e323aec41a6bc4fa
+665	675	1661038709104130815	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	e323aec41a6bc4fa
+675	685	1661038709114480650	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	806a0f473befb1ea
+675	685	1661038709114480650	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	806a0f473befb1ea
+685	694	1661038709123586438	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	cc06e67d3cde5457
+685	694	1661038709123586438	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	cc06e67d3cde5457
+694	703	1661038709132482891	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f28bc522f1e5066e
+694	703	1661038709132482891	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	f28bc522f1e5066e
+703	717	1661038709144797984	CMakeFiles/googletest-populate-complete	41eee31d2fdf70ab
+703	717	1661038709144797984	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	41eee31d2fdf70ab
+703	717	1661038709144797984	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	41eee31d2fdf70ab
+703	717	1661038709144797984	/Users/xiaodongliu/Documents/interview/ESRI/CustomString/cmake-build-debug-coverage/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	41eee31d2fdf70ab
