@@ -5,31 +5,28 @@
 
 namespace ns{
     void ns::string::incCapacity() {
-        size_t k = 1;
-        while(k <= len){
-            k <<= 1;
+        while(cap <= len){
+            cap <<= 1;
         }
 
-        char *newStr = new char[k];
+        char *newStr = new char[cap];
         strcpy(newStr, str);
         delete [] str;
         str = newStr;
-        for(size_t i = len+1; i < k; ++i){
+        for(size_t i = len+1; i < cap; ++i){
             *(newStr+i) = '\0';
         }
-        capacity = k;
     }
 
     void ns::string::initCapacity() {
-        size_t k = 1;
-        while(k <= len){
-            k <<= 1;
+        cap = 1;
+        while(cap <= len){
+            cap <<= 1;
         }
-        str = new char[k];
-        for(size_t i = len; i < k; ++i){
+        str = new char[cap];
+        for(size_t i = len; i < cap; ++i){
             *(str+i) = '\0';
         }
-        capacity = k;
     }
     ns::string::string():len(0) {
         initCapacity();
@@ -56,7 +53,7 @@ namespace ns{
         }
     }
 
-    string::string(const string &other): len(other.len), capacity(other.capacity), str(strdup(other.str)) {
+    string::string(const string &other): len(other.len), cap(other.cap), str(strdup(other.str)) {
     }
     string::string(const string &other, size_t pos, size_t _len) {
         pos = min(other.length(), pos);
@@ -69,7 +66,7 @@ namespace ns{
         strncpy(str, other.str+pos, this->len);
     }
 
-    string::string(string &&other) noexcept: len(other.len), str(other.str), capacity(other.capacity){
+    string::string(string &&other) noexcept: len(other.len), str(other.str), cap(other.cap){
         other.str = nullptr;
     }
 
@@ -85,15 +82,15 @@ namespace ns{
         return len;
     }
 
-    size_t string::getCapacity() const {
-        return capacity;
+    size_t string::capacity() const {
+        return cap;
     }
 
     bool string::empty() const noexcept {
         return len == 0;
     }
     void string::push_back(char c) {
-        if(++len == capacity){
+        if(++len == cap){
             incCapacity();
         }
         str[len-1] = c;
@@ -112,7 +109,7 @@ namespace ns{
     string &string::append(const string &other) {
         int oldLen = len;
         len += other.len;
-        if(len >= capacity){
+        if(len >= cap){
             incCapacity();
         }
         strcpy(str+oldLen, other.str);
@@ -136,7 +133,7 @@ namespace ns{
         if(this != &other){
             delete [] str;
             len = other.len;
-            capacity = other.capacity;
+            cap = other.cap;
             str = other.str;
             other.str = nullptr;
         }

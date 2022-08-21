@@ -14,8 +14,7 @@ using namespace std;
 namespace ns{
     class string{
     private:
-        size_t len;
-        size_t capacity;
+        size_t len, cap;
         char* str;
         void initCapacity();
         void incCapacity();
@@ -55,7 +54,7 @@ namespace ns{
         size_t length() const noexcept;
 
         //get capacity
-        size_t getCapacity() const;
+        size_t capacity() const;
 
         //is empty or not
         bool empty() const noexcept;
@@ -95,7 +94,8 @@ namespace ns{
     };
 
     template<class InputIterator>
-    string::string(InputIterator first, InputIterator last):len(1) {
+    string::string(InputIterator first, InputIterator last):len(0) {
+        initCapacity();
         while(first != last){
             push_back(*first++);
         }

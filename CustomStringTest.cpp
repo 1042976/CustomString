@@ -11,7 +11,6 @@ namespace ns {
                 sample2 = "eeeeefffffffeeeeeeffffff";
                 sample3 = "abcdeeeeefffffffeeeeeeffffff";
             }
-
             const char *sample;
             const char *sample2;
             const char *sample3;
@@ -63,6 +62,7 @@ namespace ns {
         EXPECT_STREQ(E.c_str(), "cd");
     }
 
+
     TEST_F(CustomStringTest, MoveConstructor){
         string A(sample);
         string B(move(A));
@@ -75,13 +75,18 @@ namespace ns {
         EXPECT_STREQ(A.c_str(), sample);
     }
 
+    TEST_F(CustomStringTest, IteratorConstructor){
+        string A(sample, sample+4);
+        EXPECT_STREQ(A.c_str(), sample);
+    }
+
     TEST_F(CustomStringTest, PushBack){
         string A;
         for(int i = 0; i < 10; ++i){
             A.push_back('a');
         }
         EXPECT_STREQ(A.c_str(), "aaaaaaaaaa");
-        EXPECT_EQ(A.getCapacity(), 16);
+        EXPECT_EQ(A.capacity(), 16);
     }
 
     TEST_F(CustomStringTest, POPBack){
@@ -100,7 +105,7 @@ namespace ns {
         string A(sample);
         A.clear();
         EXPECT_EQ(A.empty(), true);
-        EXPECT_EQ(A.getCapacity(), 1);
+        EXPECT_EQ(A.capacity(), 1);
     }
 
     TEST_F(CustomStringTest, Append){
