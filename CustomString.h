@@ -7,82 +7,99 @@
 #include <cstdio>
 #include <initializer_list>
 #include <cstring>
+#include <algorithm>
+#include <iostream>
 using namespace std;
 
-class CustomString{
-private:
-    size_t len;
-    size_t capacity;
-    char* str;
-    void initCapacity();
-    void incCapacity();
-public:
-    static const size_t npos = -1;
-    //default
-    CustomString();
+namespace ns{
+    class string{
+    private:
+        size_t len;
+        size_t capacity;
+        char* str;
+        void initCapacity();
+        void incCapacity();
+    public:
+        static const size_t npos = -1;
+        //default
+        string();
 
-    //destructor
-    ~CustomString();
+        //destructor
+        ~string();
 
-    //copy constructor
-    CustomString(const CustomString& other);
+        //copy constructor
+        string(const string& other);
 
-    //substring constructor
-    CustomString(const CustomString& other, size_t pos, size_t len = npos);
+        //substring constructor
+        string(const string& other, size_t pos, size_t _len = npos);
 
-    //move constructor
-    CustomString(CustomString&& other) noexcept;
+        //move constructor
+        string(string&& other) noexcept;
 
 
 
-    //c-string
-    CustomString(const char* s);
-    CustomString(const char* s, size_t n);
+        //c-string
+        string(const char* s);
+        string(const char* s, size_t n);
 
-    //fill constructor
-    CustomString(size_t n, char c);
+        //fill constructor
+        string(size_t n, char c);
 
-    CustomString(initializer_list<char> il);
+        string(initializer_list<char> il);
 
-    //range constructor
+        //range constructor
+        template<class InputIterator>
+        string(InputIterator first, InputIterator last);
+
+        //get length
+        size_t length() const noexcept;
+
+        //get capacity
+        size_t getCapacity() const;
+
+        //is empty or not
+        bool empty() const noexcept;
+
+        //push back a character
+        void push_back(char c);
+
+        //pop back a character
+        void pop_back();
+
+        //clear to be an empty string
+        void clear() noexcept;
+        //append a string
+        string& append(const string& other);
+
+        //convert to c-string
+        const char* c_str() const noexcept;
+
+        //copy assignment operator
+        string& operator=(const string& other);
+
+        //move assignment operator
+        string& operator=(string&& other) noexcept;
+
+        //get reference to a character
+        char& operator[] (size_t pos);
+
+        //plus
+        string operator+ (const string& other);
+
+        //append additional characters
+        string& operator+= (const string& other);
+
+        //equal
+        bool operator == (const string& other);
+
+    };
+
     template<class InputIterator>
-    CustomString(InputIterator first, InputIterator last);
-
-    //get length()
-    size_t length() const noexcept;
-
-    //push back a character
-    void push_back(char c);
-
-    //pop back a character
-    void pop_back();
-
-    //clear to be an empty string
-    void clear() noexcept;
-    //append a string
-    CustomString& append(const CustomString& other);
-
-    //copy assignment operator
-    CustomString& operator=(const CustomString& other);
-
-    //move assignment operator
-    CustomString& operator=(CustomString&& other) noexcept;
-
-    //get reference to a character
-    char& operator[] (size_t pos);
-
-    //plus
-    CustomString operator+ (const CustomString& other);
-
-    //append additional characters
-    CustomString& operator+= (const CustomString& other);
-
-};
-
-template<class InputIterator>
-CustomString::CustomString(InputIterator first, InputIterator last):len(1) {
-    while(first != last){
-        push_back(*first++);
+    string::string(InputIterator first, InputIterator last):len(1) {
+        while(first != last){
+            push_back(*first++);
+        }
     }
 }
+
 #endif //CUSTOMSTRING_CUSTOMSTRING_H
